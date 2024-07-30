@@ -1,0 +1,112 @@
+/* Home.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.home .firset-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000; 
+}
+
+
+.home .firset-section label {
+  display: flex;
+  align-items: center;
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: var(--dark);
+  cursor: pointer;
+}
+
+.home .firset-section label svg {
+  margin-right: 0.5rem;
+  font-size: 3rem;
+}
+
+ .firset-section label span {
+  color:var(--secondry);
+}
+
+.home .firset-section .nav {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  
+}
+
+
+
+.home .firset-section .nav li {
+margin-left: 2rem;
+}
+
+.home .firset-section .nav li a {
+  font-size: 1rem;
+  color: var(--dark);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.home .firset-section .nav li a:hover {
+  border-bottom: 2px solid var(--secondry);
+  
+}
+
+.nav .dropdown {
+  position: relative;
+}
+
+.nav .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 50%;
+  padding: 1rem 0;
+  background-color:var(--light);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.nav .dropdown-menu li {
+  margin: 0;
+  padding: 0.5rem 1.5rem;
+  
+}
+
+.nav .dropdown-menu li a {
+  display: block;
+  color: var(--dark);
+  text-decoration: none;
+
+}
+
+.nav .dropdown-menu li a:hover {
+  background-color: #f5f5f5;
+}
+
+.nav .dropdown.show .dropdown-menu {
+  display: block;
+}
+
+
+
+
+
+
+
+

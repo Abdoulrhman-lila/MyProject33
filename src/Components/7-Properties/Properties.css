@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.property {
+  padding: 3.2rem 0;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container img {
+  width: 100%;
+}
+
+.image-text2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--light);
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+button.image-text2 {
+  all: unset;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--light);
+  border: 1px solid hidden;
+  border-radius: 5px;
+  padding: 0.5rem 0.5rem;
+ background-color: var(--secondry2);
+ font-weight: 500;
+}
+button.image-text2:hover{
+  background-color: var(--secondry);
+  transition: 0.3s;
+}
+
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  padding: 0 2rem;
+}
+
+.search-box {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.search-box input[type="text"],
+.search-box select {
+  padding: 8px;
+  border: none;
+  outline: none;
+}
+
+.search-box button {
+  background-color: var(--secondry);
+  color: var(--light);
+  padding: 1rem 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.cards8 {
+  display: flex;
+  padding: 4rem 0;
+  flex-wrap: wrap;
+  gap: 1rem 0;
+}
+.card {
+  width: 30%;
+  height: auto;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 3px;
+}
+
+.title3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.location {
+  font-size: 1rem;
+  color: #666;
+  margin: 1rem 0;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--secondry);
+}
+.views{
+  padding: 1rem 0;
+}
+.view {
+  border: 1px solid hidden;
+  padding: 0.5rem 0.5rem;
+  border-radius: 5px;
+  color: var(--darkest);
+  background-color: var(--secondry2);
+}
+
+.view:hover {
+  background-color: var(--secondry);
+  color: var(--light);
+  transition: 0.3s;
+}
+
+.dropdown1 {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown1-toggle {
+  background-color: var(--light);
+  color: #333;
+  padding: 1rem 1rem;
+  border: none;
+  cursor: pointer;
+}
+.dropdown1-toggle:hover{
+  color: var(--secondry);
+  transition: 0.3s;
+}
+.dropdown1-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--light);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  flex-wrap: nowrap;
+}
+
+.dropdown1-menu li {
+  padding: 1rem 1rem;
+}
+
+.dropdown1:hover .dropdown1-menu,
+.dropdown1-toggle:hover + .dropdown1-menu {
+  display: flex;
+}
+
+.buy{
+  border: 1px solid;
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+  border: hidden;
+  backdrop-filter: blur(5px);
+  background-color: var(--secondry2);
+}
+button.buy {
+  color: var(--darkest);
+}
+button.buy:hover{
+  background-color: var(--secondry);
+  transition: 0.3s;
+  
+}
+
+.result{
+  text-align: center;
+  padding: 3rem 0;
+}

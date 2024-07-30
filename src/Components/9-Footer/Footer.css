@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    background-color: var(--middle);
+
+}
+.contain {
+  
+    justify-content: center;
+    gap: 4rem;
+}
+
+section.left-section1{
+    padding: 2rem 2rem;
+}
+section.left-section1 h1{
+    font-size: 2rem;
+}
+.left-section1 p{
+margin: 1rem 0;
+font-weight: 500;
+}
+
+.left-section1 ul {
+    margin: 2rem 0;
+}
+.left-section1 ul li{
+    margin: 1rem 0;
+    font-weight: 500;
+}
+
+ul li a{
+    color: var(--dark);
+}
+ul li a:hover{
+    color: var(--secondry);
+    transition: 0.3s;
+}
+
+
+.icons{
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+ }
+ .icons label{
+    margin-left: 1rem;
+ }
+ .icons label:hover{
+    cursor: pointer;
+    color: var(--secondry);
+    transition: 0.3s;
+    font-size: 1.8rem;
+ }
+  
+ section.link{
+    padding: 1rem 0;
+    text-align: center;
+    line-height: 1.7rem;
+ }
+ section.link a{
+    color: var(--dark);
+ }
+ section.link a:hover{
+    color: var(--secondry);
+    transition: 0.3s;
+ }

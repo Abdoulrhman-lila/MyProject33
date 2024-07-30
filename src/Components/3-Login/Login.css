@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+ 
+    margin-top: 2rem; 
+    margin-bottom: 2rem; 
+  
+  }
+  
+  .form {
+    width: 100%;
+    border: 1px solid #ccc hidden;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .card {
+    background-color: var(--light);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+    min-height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .card_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .form_heading {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 16px;
+  }
+
+  .form_heading span{
+    color: var(--secondry);
+  }
+  
+  .field {
+    margin-bottom: 24px;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    background-color: var(--dark);
+    color: var(--light);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    margin: 1rem 0;
+    margin-top: 1.5rem; 
+  }
+  
+  .button:hover {
+    background-color: var(--secondry);
+    transition: 0.3s;
+    color: var(--dark);
+  }

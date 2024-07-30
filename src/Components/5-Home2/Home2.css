@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.home2{
+    padding: 5rem 0;
+}
+
+section.left-sec{
+    flex-grow: 1;
+}
+section.left-sec h1{
+    font-size: 4rem;
+}
+
+section.left-sec h1 span{
+    color: var(--secondry);
+}
+
+section.right-sec{
+padding: 0 3rem;
+}
+
+section.right-sec img{
+    width: 100%;
+}
+

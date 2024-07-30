@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+  
+  .form_area {
+    background-color: var(--light);
+    padding: 0 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+    min-height: auto;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+  .title span{
+    color: var(--secondry);
+  }
+  .form_group {
+    margin-bottom: 0.5rem;
+  
+  }
+  
+  .sub_title {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+  }
+  .form_style {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  select.form_style{
+    font-size: 0.9rem;
+  }
+ 
+  .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: var(--dark);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin: 1rem 0;
+    margin-top: 1.5rem; /* زيادة الهامش العلوي */
+  }
+  
+  .btn:hover {
+    background-color: var(--secondry);
+    transition: 0.3s;
+    color: var(--dark);
+  }
+
+  .address-options {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0.5rem;
+  }
+  
+  .address-options > * {
+    flex: 1;
+  }
+  
+  .form_style {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .form_style option {
+    font-size: 1rem;
+  }

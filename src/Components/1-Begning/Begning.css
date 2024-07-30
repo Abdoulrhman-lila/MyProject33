@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* حتى يتم احتساب الهوامش والحشوات ضمن الأبعاد */
+}
+
+body {
+  font-family: Arial, sans-serif; /* تحديد الخط الأساسي */
+
+}
+
+.intro {
+  text-align: center;
+  padding: 2rem;
+}
+.intro .title h1{
+margin-bottom: 1rem;
+}
+
+.intro span {
+  color: var(--secondry);
+}
+
+.intro label {
+  font-size: 5rem;
+}
+
+.intro p {
+  padding: 1rem 0;
+  font-weight: 500;
+}
+.begin .text{
+ text-align: center;
+  }
+  .text {
+    position: relative;
+    text-align: center;
+}
+
+.text img {
+    width: 100%;
+    height: 50vh;
+    position: relative;
+}
+
+.text p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(66, 67, 70, 0.2);
+    padding: 2rem;
+    border-radius: 5px;
+    color: #fdf8f8;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 400;
+}
+.text h2{
+ 
+  font-size: 2rem;
+}
+.text h2 span{
+  color: var(--secondry);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* تعتيم بلون أسود */
+    z-index: 1; /* ضع الغباشة فوق الصورة والنص */
+}
+section.sec {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 2rem; /* إضافة حشو للعنصر */
+}
+
+section.right-section{ 
+  padding: 0 2rem;
+}
+section.right-section h2{
+  font-size: 2.3rem;
+}
+section.right-section p{
+  padding: 2rem 0;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+section.left-sec {
+  float: left; 
+  margin-right: 2.2rem; 
+}
+
+section.right-sec1 img {
+  float: right; 
+}
+
+section.left-sec{
+  margin: 0 2rem;
+}
+section.left-sec h2{
+  font-size: 2.3rem;
+}
+
+section.left-sec p{
+  padding: 2rem 0;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.join{
+  text-align: center;
+  padding: 3rem 0;
+}
+
+section.sec button {
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--secondry2);
+  color: var(--darkest);
+  border: 1px solid transparent hidden;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+section.sec button:hover {
+  background-color: var(--secondry);
+  color: var(--light);
+  transition: 0.3s;
+  
+}
