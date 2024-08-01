@@ -7,12 +7,15 @@ function Begning() {
   return (
     <>
       <div className="begin">
-        <div className="intro ">
-          <div className=" title ">
+        <div className="intro flex ">
+          <div className=" title flex">
             <label ><MdRealEstateAgent /></label>
             <h1>ESTATE <span>ZEN</span></h1>
           </div>
-          <p>A platform for buying and selling real estate that helps you find the right property in the area you want at reasonable prices.</p>
+          <section className="sec  flex">
+          <button> <Link to="/login"> Log In</Link></button>
+          <button> <Link to="/create-account" >Create Account</Link></button>
+        </section>
         </div>
 
 
@@ -39,15 +42,6 @@ function Begning() {
             <img src="bo3.png" alt="" />
           </section>
         </div>
-
-        <div className="join">
-          <h1>To join us, please create an account.</h1>
-        </div>
-        <section className="sec  flex">
-          <button> <Link to="/login"> Log In</Link></button>
-          <button> <Link to="/create-account" >Create Account</Link></button>
-        </section>
-
       </div>
     </>
   )

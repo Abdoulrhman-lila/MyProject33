@@ -63,6 +63,7 @@ li{
     --darkest: #000;
     --light: #fff;
     --secondry2: rgb(120, 241, 120 ,0.5);
+    --midlle:rgba(205, 218, 209, 0.767);
  
  }
  .border{

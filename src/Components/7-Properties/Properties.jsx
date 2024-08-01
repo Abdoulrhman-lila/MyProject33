@@ -1,13 +1,14 @@
 import './Properties.css';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FaStar } from 'react-icons/fa';
 
 
 
 const data = [
   {
     id:1,
-    imgSrc: "banner-01.jpg",
+    imgSrc: "banner-02.jpg",
     title: "Luxury House",
     location: "Location: Qudsaya suburb",
     space:" Space:80m",
@@ -117,20 +118,16 @@ const data = [
 
 function Property() {
   const [showPopup, setShowPopup] = useState(Array(data.length).fill(false));
+  const [locationFilter, setLocationFilter] = useState("");
+  const [priceFilter, setPriceFilter] = useState("");
+  const [spaceFilter, setSpaceFilter] = useState("");
+  const [rating, setRating] = useState(0);
 
   const handleViewClick = (index) => {
     const updatedShowPopup = [...showPopup];
     updatedShowPopup[index] = !updatedShowPopup[index];
     setShowPopup(updatedShowPopup);
   };
-
-  
-
-
-
-  const [locationFilter, setLocationFilter] = useState("");
-  const [priceFilter, setPriceFilter] = useState("");
-  const [spaceFilter, setSpaceFilter] = useState("");
 
   const filteredData = data.filter((item) => {
     return (
@@ -152,15 +149,16 @@ function Property() {
     setSpaceFilter(event.target.value);
   };
 
-
-
+  const handleChange = (newRating) => {
+    setRating(newRating);
+  };
 
   return (
     <div className="property">
       <div className="image-container">
         <img src="page-heading-bg.jpg" alt="" />
         <span className="image-text2">PROPERTIES</span>
-        <button className='image-text2'><Link to="##">To add a property click here</Link></button>
+        <button className='image-text2'><Link to="/add">To add a property click here</Link></button>
       </div>
       <div className="option">
   
@@ -199,9 +197,9 @@ function Property() {
       </div>
       </div>
       {filteredData.length>0 ? (
-      <section className="cards8 flex">
+      <section className="cardsss flex">
   {filteredData.map((item, index) => (
-    <article className="card" key={index} id={`card-${index}`}>
+    <article className="card122" key={index} id={`card-${index}`}>
       <img src={item.imgSrc} alt="" />
       <h3 className="title3">{item.title}</h3>
       <p className="location">{item.location}</p>
@@ -227,6 +225,7 @@ function Property() {
           </div>
         )}
       </div>
+      
       <div className='butt-buy'>
         <button className='buy'><a href="">Buy</a></button>
       </div>

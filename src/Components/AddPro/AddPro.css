@@ -1,0 +1,49 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.inputss h1 {
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+}
+.inputss h1 span{
+    color: var(--secondry);
+}
+
+.forms label {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.inputss {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.inputss input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button.butt{
+    border: 1px solid hidden;
+    border-radius: 5px;  
+    padding: 0.5rem 1rem;
+    background-color: var(--secondry2);
+}
+
+button.butt:hover{
+    background-color: var(--secondry);
+    color: var(--light);
+    transition: 0.3s;
+}
+
