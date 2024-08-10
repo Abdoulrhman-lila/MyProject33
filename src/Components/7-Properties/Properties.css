@@ -171,25 +171,9 @@ gap: 1.5rem 1.5rem;
 .dropdown1-toggle:hover + .dropdown1-menu {
   display: flex;
 }
+.heart {
+  font-size: 1.7rem;
+  margin-left: auto;
+  cursor: pointer;
 
-.buy{
-  border: 1px solid;
-  padding: 0.5rem 2rem;
-  border-radius: 5px;
-  border: hidden;
-  backdrop-filter: blur(5px);
-  background-color: var(--secondry2);
-}
-button.buy {
-  color: var(--darkest);
-}
-button.buy:hover{
-  background-color: var(--secondry);
-  transition: 0.3s;
-  
-}
-
-.result{
-  text-align: center;
-  padding: 3rem 0;
 }

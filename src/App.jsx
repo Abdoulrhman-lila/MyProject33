@@ -9,6 +9,8 @@ import Properties from './Components/7-Properties/Properties';
 import Footer from './Components/10-Footer/Footer'
 import Testimonials from './Components/8-Testimonials/Testimonials';
 import AddPro from './Components/AddPro/AddPro';
+import View from './Components/View/View';
+import About from './Components/6-About/About';
 
 function App() {
   return (
@@ -36,8 +38,17 @@ function App() {
             <Footer/>
           </>
         } />
+   <Route path="/about" element={
+          <>
+            <Home />
+            <About/>
+            <Footer/>
+          </>
+        } />
+
         <Route path='/testimonials' element={<Testimonials/>}/>
         < Route path='/add' element={<AddPro/>}/>
+        <Route path='/view' element={<View/>}/>
       </Routes>
     </Router>
   );

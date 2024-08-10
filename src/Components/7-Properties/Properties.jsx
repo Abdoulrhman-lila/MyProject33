@@ -1,7 +1,7 @@
 import './Properties.css';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaStar } from 'react-icons/fa';
+import { CiHeart } from "react-icons/ci";
 
 
 
@@ -18,11 +18,7 @@ const data = [
       "Baths: 3",
       "Garages: 1"
     ],
-    images: [
-      "property-01.jpg",
-      "banner-02.jpg",
-      "banner-03.jpg"
-    ]
+    
   },
   {
     id:2,
@@ -36,11 +32,7 @@ const data = [
       "Baths: 2",
       "Garages: 1"
     ],
-    images: [
-      "property-01.jpg",
-      "banner-02.jpg",
-      "banner-03.jpg"
-    ]
+    
   },
   {
     id:3,
@@ -54,11 +46,7 @@ const data = [
       "Baths: 2",
       "Garages: 1"
     ],
-    images: [
-      "property-01.jpg",
-      "banner-02.jpg",
-      "banner-03.jpg"
-    ]
+    
   },
   {
     id:4,
@@ -72,11 +60,7 @@ const data = [
       "Baths: 2",
       "Garages: 1"
     ],
-    images: [
-      "property-01.jpg",
-      "banner-02.jpg",
-      "banner-03.jpg"
-    ]
+    
   },
   {
     id:5,
@@ -90,11 +74,7 @@ const data = [
       "Baths: 2",
       "Garages: 1"
     ],
-    images: [
-      "property-01.jpg",
-      "banner-02.jpg",
-      "banner-03.jpg"
-    ]
+    
   },
   {
     id:6,
@@ -108,26 +88,15 @@ const data = [
       "Baths: 2",
       "Garages: 1"
     ],
-    images: [
-      "property-01.jpg",
-      "banner-02.jpg",
-      "banner-03.jpg"
-    ]
+    
   },
 ];
 
 function Property() {
-  const [showPopup, setShowPopup] = useState(Array(data.length).fill(false));
   const [locationFilter, setLocationFilter] = useState("");
   const [priceFilter, setPriceFilter] = useState("");
   const [spaceFilter, setSpaceFilter] = useState("");
-  const [rating, setRating] = useState(0);
-
-  const handleViewClick = (index) => {
-    const updatedShowPopup = [...showPopup];
-    updatedShowPopup[index] = !updatedShowPopup[index];
-    setShowPopup(updatedShowPopup);
-  };
+ 
 
   const filteredData = data.filter((item) => {
     return (
@@ -149,10 +118,9 @@ function Property() {
     setSpaceFilter(event.target.value);
   };
 
-  const handleChange = (newRating) => {
-    setRating(newRating);
-  };
 
+
+  
   return (
     <div className="property">
       <div className="image-container">
@@ -201,42 +169,27 @@ function Property() {
   {filteredData.map((item, index) => (
     <article className="card122" key={index} id={`card-${index}`}>
       <img src={item.imgSrc} alt="" />
+      <div className='flex'>
       <h3 className="title3">{item.title}</h3>
+      <label className='heart'><CiHeart/></label>
+      </div>
       <p className="location">{item.location}</p>
       <p className="space">{item.space}</p>
       <h5 className="price">{item.price}</h5>
 
       <div className="views">
-        <button
-          className="view"
-          onClick={() => handleViewClick(index)}
-        >
-          {showPopup[index] ? 'Click here to hide' : 'Click here to view'}
-        </button>
-        {showPopup[index] && (
-          <div className="popup">
-            <div className="popup-content">
-              {item.images.map((image, imageIndex) => (
-                <div key={imageIndex} className="popup-card ">
-                  <img src={image} alt="" />
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
+        <Link to="/view"><button className="view">click her to view</button></Link>
+      
       </div>
       
-      <div className='butt-buy'>
-        <button className='buy'><a href="">Buy</a></button>
-      </div>
-      <div className="dropdown1">
-        <button className="dropdown1-toggle">Features</button>
-        <ul className="dropdown1-menu">
-          {item.features.map((feature, featureIndex) => (
-            <li key={featureIndex}>{feature}</li>
-          ))}
-        </ul>
-      </div>
+      <div className="dropdown1 flex">
+  <button className="dropdown1-toggle">Features</button>
+  <ul className="dropdown1-menu">
+    {item.features.map((feature, featureIndex) => (
+      <li key={featureIndex}>{feature}</li>
+    ))}
+  </ul>
+</div>
     </article>
   ))}
 </section>

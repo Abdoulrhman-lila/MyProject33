@@ -68,8 +68,8 @@
   color: var(--secondry);
 }
 #client form button {
-  background-color: var(--dark);
-  color: #fff;
+  background-color: var(--secondry2);
+  color:var(--dark);
   border: none;
   border-radius: 4px;
   padding: 0.75rem 1.5rem;
@@ -79,5 +79,6 @@
 
 #client form button:hover {
   background-color: var(--secondry);
+  color: var(--light);
   transition: 0.3s;
 }
