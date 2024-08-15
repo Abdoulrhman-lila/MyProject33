@@ -1,5 +1,7 @@
 import "./View.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
 
 const data3 = [
     {
@@ -35,6 +37,7 @@ function View() {
   const endIndex = startIndex + itemsPerPage;
   const currentItems = data3.slice(startIndex, endIndex);
     return (
+
         <div className="views2">
             {currentItems.map((item, index) => (
                 <section key={index} className="information-sec">
@@ -50,6 +53,14 @@ function View() {
         <button onClick={handleNextPage} disabled={currentPage >= data3.length / itemsPerPage - 1}>
           Next
         </button>
+      </div>
+      <div className="text4 flex">
+        <h2>If you like the property, you can buy it or book an appointment for</h2>
+        <img src="bo.png" alt="" />
+      </div>
+      <div className="buttons">
+      <Link to="/buy"><button className="buy">Buy</button></Link>
+      <Link to="/appointments"><button className="res">Book an appointment</button></Link>
       </div>
         </div>
     );

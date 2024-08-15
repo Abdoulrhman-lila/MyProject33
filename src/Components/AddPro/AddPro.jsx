@@ -23,7 +23,7 @@ function AddPro() {
     };
 
     return (
-        <div>
+        <div className="add">
             <div className="inputss">
                 <h1>Add New <span>Property</span></h1>
                 <form className="forms" onSubmit={handleSubmit}>
@@ -32,11 +32,7 @@ function AddPro() {
                         <input type="file" accept="image/*" multiple onChange={handleImageChange} />
                     </label>
                     <br />
-                    <label>
-                        Area:
-                        <input type="text" value={area} onChange={(e) => setArea(e.target.value)} />
-                    </label>
-                    <br />
+                 
                     <label>
                         Bedrooms:
                         <input type="number" value={bedrooms} onChange={(e) => setBedrooms(e.target.value)} />

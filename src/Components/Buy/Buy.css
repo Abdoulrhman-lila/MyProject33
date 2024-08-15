@@ -1,0 +1,45 @@
+.buyy {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc hidden;
+  border-radius: 5px;
+
+}
+.buyy h2 span{
+  color: var(--secondry);
+}
+
+.Form {
+  display: grid;
+  grid-gap: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  padding: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+
+button.pay {
+ padding: 0.5rem 0.5rem;
+  background-color: var(--secondry2);
+  color:var(--dark);
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+button.pay:hover {
+  background-color: var(--secondry);
+  color: var(--light);
+  transition: 0.3s;
+}

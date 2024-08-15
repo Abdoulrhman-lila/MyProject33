@@ -11,6 +11,8 @@ import Testimonials from './Components/8-Testimonials/Testimonials';
 import AddPro from './Components/AddPro/AddPro';
 import View from './Components/View/View';
 import About from './Components/6-About/About';
+import Appointments from './Components/Appointments/Appointments';
+import Buy from './Components/Buy/Buy';
 
 function App() {
   return (
@@ -49,6 +51,8 @@ function App() {
         <Route path='/testimonials' element={<Testimonials/>}/>
         < Route path='/add' element={<AddPro/>}/>
         <Route path='/view' element={<View/>}/>
+        <Route path='/appointments' element={<Appointments/>}/>
+        <Route path='/buy' element={<Buy/>}/>
       </Routes>
     </Router>
   );
