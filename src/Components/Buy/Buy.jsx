@@ -20,9 +20,7 @@ function Buy() {
         <input {...register('creditCardNumber', { required: true, pattern: /^[0-9]{16}$/ })} />
         {errors.creditCardNumber && <span>Please enter a valid 16-digit credit card number</span>}
 
-        <label>Amount:</label>
-        <input type="number" {...register('amount', { required: true, min: 1 })} />
-        {errors.amount && <span>Please enter a valid amount</span>}
+
 
         <button className="pay" type="submit">Pay</button>
       </form>

@@ -5,22 +5,54 @@
 .views2{
     padding: 0 2rem;
 }
+
+
+
+.information-sec ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.information-sec li {
+  margin-bottom: 10px;
+}
+
+.information-sec li span {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.information-sec li span:after {
+  content: ":";
+}
+
+section.firset-sec img{
+  width: 100%;
+}
 section.information-sec{
     margin: 1rem 0;
 }
 section.information-sec img{
-    width: 75%;
+    width: 50%;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-
-.pagination {
-    display: flex;
-    justify-content: center;
-  }
+ul.info33 {
+  padding: 0 8rem;
+  margin: 0 3rem;
+  background-color: var(--light);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgb(238, 234, 234);
+}
+ul.info33 h2{
+  padding: 1rem 0;
+  font-size: 1.7rem;
+}
   
+ul.info33 h2 span{
+  color: var(--secondry);
+}
   .pagination button {
     background-color: var(--secondry2);
     padding: 0.5rem 1rem;
@@ -35,17 +67,11 @@ section.information-sec img{
     color: var(--light);
     transition: 0.3s;
   }
-  .text4{
-    text-align: center;
-    padding: 2rem 0;
-  }
-  .text4 img{
-    padding: 1rem 0;
-  }
-
+ 
   .buttons{
-  text-align: center;
-  padding: 4rem 0;
+float: right;
+  padding: 1rem 0;
+  margin-right: 8rem;
   }
   button.res{
     all: unset;
@@ -71,6 +97,22 @@ section.information-sec img{
   }
   button.buy:hover{
     background-color: var(--secondry);
+    transition: 0.3s;
+  }
+  .rat h2 span{
+    color: var(--secondry);
+  }
+  button.evalotion{
+    all: unset;
+    border: 1px solid black hidden;
+    padding: 0.5rem 0.5rem;
+    margin: 1rem 0;
+    background-color: var(--secondry2);
+    border-radius: 5px;
+  }
+  button.evalotion:hover{
+    background-color: var(--secondry);
+    color: var(--light);
     transition: 0.3s;
   }
   

@@ -7,10 +7,10 @@ function Testimonials() {
 
 
   const [newTestimonial, setNewTestimonial] = useState({
-    image: '',
+    title:'',
     name: '',
     text: '',
-    rating: 0
+
   });
 
   const handleInputChange = (event) => {
@@ -21,21 +21,16 @@ function Testimonials() {
     }));
   };
 
-  const handleRatingChange = (rating) => {
-    setNewTestimonial((prevState) => ({
-      ...prevState,
-      rating
-    }));
-  };
+ 
 
   const handleSubmit = (event) => {
     event.preventDefault();
     setTestimonials((prevState) => [...prevState, newTestimonial]);
     setNewTestimonial({
-      image: '',
+    title:'',
       name: '',
       text: '',
-      rating: 0
+  
     });
   };
 
@@ -51,24 +46,15 @@ function Testimonials() {
             <input type="text" name="name" value={newTestimonial.name} onChange={handleInputChange} required />
           </label>
           <label>
-            Image URL:
-            <input type="text" name="image" value={newTestimonial.image} onChange={handleInputChange} required />
+            Title:
+            <input type="text" name="title" value={newTestimonial.title} onChange={handleInputChange} required />
           </label>
           <label>
             Testimonial:
             <textarea name="text" value={newTestimonial.text} onChange={handleInputChange} required></textarea>
           </label>
           <label>
-            Rating:
-            <div className="rating">
-            {[...Array(5)].map((_, index) => (
-              <FaStar
-                key={index}
-                className={`star ${index < newTestimonial.rating ? 'active' : ''}`}
-                onClick={() => handleRatingChange(index + 1)}
-              />
-            ))}
-          </div>
+           
            
           </label>
           <button type="submit">Submit Testimonial</button>

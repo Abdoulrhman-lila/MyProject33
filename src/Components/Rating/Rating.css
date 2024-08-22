@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.rat{
+    padding: 1rem 2rem;
+}
+
+
+.rating-form {
+    padding: 20px;
+    border: 1px solid #ccc; /* احذف hidden ليكون الحدود مرئية */
+    border-radius: 8px;
+    max-width: 400px;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* إضافة box-shadow */
+}
+
+.rating-form div {
+    margin-bottom: 1rem;
+}
+
+.rating-form label {
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.rating-form input,
+.rating-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #797474 ;
+    border-radius: 4px;
+}
+
+.rating-form button {
+    background-color:var(--secondry2);
+    color:var(--dark);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.rating-form button:hover{
+    background-color:var(--secondry);
+    color:var(--light);
+    transition: 0.3s;
+}

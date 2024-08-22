@@ -62,6 +62,7 @@ margin-left: 2rem;
 
 .home .firset-section .nav li a:hover {
   border-bottom: 2px solid var(--secondry);
+  color: var(--secondry);
   
 }
 
