@@ -7,6 +7,7 @@ function Appointments() {
         username: '',
         property_id: '',
         date: '',
+        Time:'',
         status: ''
     });
 
@@ -35,6 +36,10 @@ function Appointments() {
                 <label>
                     Date:
                     <input type="date" name="date" value={formData.date} onChange={handleChange} />
+                </label>
+                <label>
+                    Time:
+                    <input type="time" name="time" value={formData.Time} onChange={handleChange} />
                 </label>
                 <button type="submit">Book Appointment</button>
             </form>

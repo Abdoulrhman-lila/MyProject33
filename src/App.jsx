@@ -14,6 +14,11 @@ import About from './Components/6-About/About';
 import Appointments from './Components/Appointments/Appointments';
 import Buy from './Components/Buy/Buy';
 import Rating from './Components/Rating/Rating';
+import Manager from './Components/Manager/Manager'
+import Admine from './Components/Admine/Admine';
+import Profile from './Components/Profile/Profile';
+
+
 
 function App() {
   return (
@@ -55,6 +60,10 @@ function App() {
         <Route path='/appointments' element={<Appointments/>}/>
         <Route path='/buy' element={<Buy/>}/>
         <Route path='/rating' element={<Rating/>}/>
+        <Route path='/manager' element={<Manager/>}/>
+        <Route path='/admine' element={<Admine/>}/>
+        <Route path='/profile' element={<Profile/>}/>
+    
       </Routes>
     </Router>
   );

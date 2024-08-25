@@ -28,8 +28,9 @@ function Home() {
         {showDropdown && (
           <ul className="dropdown-menu">
             <li><a href="/testimonials">testimonials</a></li>
-            <li><a href="#">Page 2</a></li>
-            <li><a href="#">Page 3</a></li>
+            <li><a href="/manager">Manager</a></li>
+            <li><a href="/admine">Admine</a></li>
+            <li><a href="/profile">Profile</a></li>
           </ul>
         )}
       </li>
