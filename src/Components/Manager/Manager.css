@@ -1,97 +1,74 @@
-/* Manager.css */
-
-.manager-container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
+.manager-page {
+  display: flex;
+  background-color: #f9f9f9;
+  min-height: 100vh;
 }
 
-.manager-header {
-  background-color: #4CAF50;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
-  border-radius: 5px;
+.sidebar {
+  width: 250px;
+  height: 100%;
+  background-color: #000; /* Black background */
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 }
 
-.manager-title {
-  font-size: 2rem;
-  margin: 0;
+.sidebar h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
 }
 
-.manager-main {
-  margin-top: 2rem;
-}
-
-.manager-section {
-  background-color: #f5f5f5;
-  padding: 1.5rem;
-  border-radius: 5px;
-  margin-bottom: 2rem;
-}
-
-.manager-section-title {
-  font-size: 1.5rem;
-  margin-top: 0;
-}
-
-.manager-user-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 1rem;
-}
-
-.manager-user-item {
-  background-color: #fff;
-  padding: 1rem;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.manager-user-name {
-  font-size: 1.2rem;
-  margin-top: 0;
-}
-
-.manager-user-email {
-  color: #666;
-  margin-bottom: 0;
-}
-
-.manager-stats {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1rem;
-}
-
-.manager-stat-item {
-  background-color: #fff;
-  padding: 1rem;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.manager-stat-label {
-  font-size: 1rem;
-  font-weight: bold;
-  margin-top: 0;
-}
-
-.manager-stat-value {
-  font-size: 1.2rem;
-  margin-bottom: 0;
-}
-
-.manager-property-list {
+.sidebar ul {
   list-style-type: none;
   padding: 0;
 }
 
-.manager-property-item {
-  background-color: #fff;
-  padding: 1rem;
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.sidebar ul li a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 0px;
+  margin-left: 350px; /* Ensure this matches the sidebar width */
+}
+
+.user_charts {
+  width: 1000px;
+  height: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.chart-container {
+  background-color: #ffffff;
+  width: 400px;
+  height: 400px;
+  padding: 30px !important;
+  position: relative;
+  margin: 20px;
+  margin-bottom: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 0.5rem;
 }

@@ -17,6 +17,11 @@ import Rating from './Components/Rating/Rating';
 import Manager from './Components/Manager/Manager'
 import Admine from './Components/Admine/Admine';
 import Profile from './Components/Profile/Profile';
+import AdmineProperties from './Components/Admine_Properties/AdmineProperties';
+import NotAllowed from "./Components/NotAllowed/NotAllowed";
+import PropertyStatisticsPage from './Components/PropertyStatisticsPage/PropertyStatisticsPage';
+
+
 
 
 
@@ -62,7 +67,13 @@ function App() {
         <Route path='/rating' element={<Rating/>}/>
         <Route path='/manager' element={<Manager/>}/>
         <Route path='/admine' element={<Admine/>}/>
+        <Route path="/AdmineProperties" element={<AdmineProperties />} /> 
         <Route path='/profile' element={<Profile/>}/>
+        <Route path="/not-allowed" element={<NotAllowed />} /> 
+        <Route path="/propertyStatisticsPage" element={<PropertyStatisticsPage />} /> 
+        
+       
+    
     
       </Routes>
     </Router>

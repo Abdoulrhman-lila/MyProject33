@@ -5,7 +5,16 @@
     box-sizing: border-box;
 }
 
+.add {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+}
 
+.inputss {
+    width: 48%;
+}
 
 .inputss h1 {
     font-size: 2.3rem;
@@ -13,17 +22,13 @@
     padding-bottom: 0.5rem;
     text-align: center;
 }
-.inputss h1 span{
+
+.inputss h1 span {
     color: var(--secondry);
 }
 
 .forms label {
     display: block;
-}
-
-.inputss {
-    width: 50%;
-    margin: 0 auto;
 }
 
 .inputss input {
@@ -34,16 +39,27 @@
     border-radius: 3px;
 }
 
-button.butt{
+button.butt {
     border: 1px solid hidden;
-    border-radius: 5px;  
+    border-radius: 5px;
     padding: 0.5rem 1rem;
     background-color: var(--secondry2);
 }
 
-button.butt:hover{
+button.butt:hover {
     background-color: var(--secondry);
     color: var(--light);
     transition: 0.3s;
 }
 
+.map-container {
+    width: 48%;
+    height: 500px;
+    position: relative;
+    top: 100px; /* Adjust height as needed */
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}

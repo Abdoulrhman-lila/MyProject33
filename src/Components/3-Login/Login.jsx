@@ -1,14 +1,15 @@
 import "./Login.css"
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import axios from 'axios';
 
 function Login() {
 
   const navigate = useNavigate();
-  const [userName, setUserName] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
-
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
@@ -19,7 +20,7 @@ function Login() {
   };
 
   const validateForm = () => {
-    if (!userName || !password) {
+    if (!email || !password) {
       return false; // If any required field is empty, return false
     }
     return true; // If all required fields are valid, return true
@@ -37,9 +38,18 @@ function Login() {
             <h1 className="form_heading">Sign <span>in</span></h1>
           </div>
           <div className="field">
-            <label htmlFor="username">Username</label>
-            <input className="input" name="username" type="text" placeholder="Username" id="username" value={userName} onChange={(e) => setUserName(e.target.value)} required />
-          </div>
+        <label htmlFor="email">Email</label>
+        <input
+          className="input"
+          name="email"
+          type="email"
+          placeholder="Email"
+          id="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+      </div>
           <div className="field">
             <label htmlFor="password">Password</label>
             <input className="input" name="user_password" type="password" placeholder="Password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} required />

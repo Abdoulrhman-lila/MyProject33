@@ -1,0 +1,74 @@
+.admin-container {
+  display: flex;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 100vh; /* جعل الحاوية تأخذ ارتفاع الشاشة */
+  position: relative; /* تعيين موضع نسبي لحاوية الإدارة */
+}
+
+.sidebar {
+  position: fixed; /* جعل الشريط الجانبي ثابتًا */
+  width: 25%;
+  height: 100%; /* جعل ارتفاع الشريط الجانبي 100% */
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  margin-right: 20px;
+  flex-shrink: 0; /* منع الشريط الجانبي من الانكماش */
+}
+
+.main-content {
+  margin-left: 25%; /* إضافة هامش يسار ليترك مساحة للشريط الجانبي */
+  padding: 20px; /* إضافة حشوة داخل قسم المحتوى */
+  background-color: #fff; /* خلفية بيضاء لقسم المحتوى */
+  border-radius: 8px; /* حدود دائرية للقسم */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* ظل خفيف للقسم */
+  height: calc(100vh - 40px); /* ضبط ارتفاع المحتوى ليتناسب مع ارتفاع الشاشة */
+  overflow: auto; /* السماح بالتمرير إذا كان المحتوى كبيرًا */
+}
+
+.admin-title, .pending-requests-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.pending-requests-table {
+  width: 100%; /* استخدام 100% من العرض المتاح */
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.table-header {
+  background-color: #f2f2f2;
+  padding: 10px;
+  text-align: left;
+  font-weight: bold;
+  color: #333;
+}
+
+.table-row {
+  border-bottom: 1px solid #ddd;
+}
+
+.table-cell {
+  padding: 10px;
+  color: #333;
+}
+
+.reject-button {
+  background-color: #f44336;
+  border: none;
+  color: #fff;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+}

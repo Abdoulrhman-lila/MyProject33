@@ -11,8 +11,6 @@ const navigate = useNavigate();
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [city, setCity] = useState("");
-  const [region, setRegion] = useState("");
   const [error, setError] = useState(null); 
 
 
@@ -31,8 +29,10 @@ const navigate = useNavigate();
       setError("Please fill in all required fields correctly.");
     }
   };
+
+  
   const validateForm = ()=>{
-    if(!firstName || !lastName || !email || !password || !phoneNumber || !region || !city){
+    if(!firstName || !lastName || !email || !password || !phoneNumber ){
       return false;
     }
     else{
@@ -46,8 +46,7 @@ const navigate = useNavigate();
     setLastName("");
     setEmail("");
     setPassword("");
-    setCity("");
-    setRegion("");
+    
     setError(null); 
   };
 
@@ -131,37 +130,7 @@ const navigate = useNavigate();
               required
             />
           </div>
-          <div className="form_group">
-            <label className="sub_title" htmlFor="address">
-              Address
-            </label>
-            <div className="address-options">
-              <select
-                id="city"
-                className="form_style"
-                value={city}
-                onChange={(e) => setCity(e.target.value)}
-                required
-              >
-                <option value="">Select City</option>
-                <option value="city1">City 1</option>
-                <option value="city2">City 2</option>
-                <option value="city3">City 3</option>
-              </select>
-              <select
-                id="region"
-                className="form_style"
-                value={region}
-                onChange={(e) => setRegion(e.target.value)}
-                required
-              >
-                <option value="">Select Region</option>
-                <option value="region1">Region 1</option>
-                <option value="region2">Region 2</option>
-                <option value="region3">Region 3</option>
-              </select>
-            </div>
-          </div>
+         
           {error && <div className="error">{error}</div>}
           <div className="form-actions">
             <button type="submit" className="btn">

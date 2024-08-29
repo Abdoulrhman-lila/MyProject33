@@ -9,7 +9,6 @@
 
 .image-container {
   position: relative;
-
 }
 
 .image-container img {
@@ -33,17 +32,16 @@ button.image-text2 {
   left: 50%;
   transform: translate(-50%, -50%);
   color: var(--light);
-  border: 1px solid hidden;
+  background-color: var(--secondry2);
   border-radius: 5px;
-  padding: 0.5rem 0.5rem;
- background-color: var(--secondry2);
- font-weight: 500;
+  padding: 0.5rem;
+  font-weight: 500;
 }
-button.image-text2:hover{
+
+button.image-text2:hover {
   background-color: var(--secondry);
   transition: 0.3s;
 }
-
 
 .search-container {
   display: flex;
@@ -59,7 +57,6 @@ button.image-text2:hover{
   overflow: hidden;
 }
 
-.search-box input[type="text"],
 .search-box select {
   padding: 8px;
   border: none;
@@ -69,26 +66,25 @@ button.image-text2:hover{
 .search-box button {
   background-color: var(--secondry);
   color: var(--light);
-  padding: 1rem 1rem;
+  padding: 1rem;
   border: none;
   cursor: pointer;
 }
 
 .cardsss {
-  all: unset;
   padding: 4rem 0;
+  display: flex;
   flex-wrap: wrap;
-justify-content: center;
-gap: 1.5rem 1.5rem;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 .card122 {
   width: 25%;
-  height: auto;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 10px;
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -118,15 +114,16 @@ gap: 1.5rem 1.5rem;
   font-weight: bold;
   color: var(--secondry);
 }
-.views{
+
+.views {
   padding: 1rem 0;
 }
+
 .view {
-  border: 1px solid hidden;
-  padding: 0.5rem 0.5rem;
   border-radius: 5px;
   color: var(--darkest);
   background-color: var(--secondry2);
+  padding: 0.5rem;
 }
 
 .view:hover {
@@ -135,45 +132,12 @@ gap: 1.5rem 1.5rem;
   transition: 0.3s;
 }
 
-.dropdown1 {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown1-toggle {
-  background-color: var(--light);
-  color: #333;
-  padding: 1rem 1rem;
-  border: none;
-  cursor: pointer;
-}
-.dropdown1-toggle:hover{
-  color: var(--secondry);
-  transition: 0.3s;
-}
-.dropdown1-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: var(--light);
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: none;
-  flex-wrap: nowrap;
-}
-
-.dropdown1-menu li {
-  padding: 1rem 1rem;
-}
-
-.dropdown1:hover .dropdown1-menu,
-.dropdown1-toggle:hover + .dropdown1-menu {
-  display: flex;
-}
 .heart {
   font-size: 1.7rem;
   margin-left: auto;
   cursor: pointer;
-
+}
+p.result{
+  text-align: center;
+  padding: 1rem 0;
 }

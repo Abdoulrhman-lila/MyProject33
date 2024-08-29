@@ -1,76 +1,90 @@
 import "./Admine.css";
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 function Admine() {
-  const [pendingRequests, setPendingRequests] = useState([]);
+  const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetchPendingRequests();
+    fetchUsers();
   }, []);
-
-  const fetchPendingRequests = () => {
-    console.log('Fetching pending requests...');
-    fetch('/api/pending-requests')
-      .then(response => response.json())
-      .then(data => {
-        console.log('Received data:', data);
-        setPendingRequests(data);
+  const fetchUsers = () => {
+    console.log('Fetching users...');
+    axios.get('http://127.0.0.1:8000/api/get_user') // Replace with your actual endpoint
+      .then(response => {
+        console.log('Received data:', response.data);
+        setUsers(response.data);
+      })
+      .catch(error => {
+        console.error('Error fetching users:', error);
       });
   };
 
-  const approveRequest = (requestId) => {
-    console.log('Approving request:', requestId);
-    fetch(`/api/approve-request/${requestId}`, {
-      method: 'POST',
-    })
-      .then(response => response.json())
-      .then(() => {
-        console.log('Request approved!');
-        fetchPendingRequests();
-      });
-  };
+  const toggleCanAdd = (userId, currentStatus) => {
+    console.log('Toggling can_add for user:', userId);
+    const updatedStatus = !currentStatus;
 
-  const rejectRequest = (requestId) => {
-    console.log('Rejecting request:', requestId);
-    fetch(`/api/reject-request/${requestId}`, {
-      method: 'POST',
-    })
-      .then(response => response.json())
-      .then(() => {
-        console.log('Request rejected!');
-        fetchPendingRequests();
+    axios.post(`http://127.0.0.1:8000/api/toggle-can-add`, {id:userId,can_add: updatedStatus }) // Replace with your actual endpoint
+      .then(response => {
+        console.log('User status updated!');
+        fetchUsers(); // Refresh the user list
+      })
+      .catch(error => {
+        console.error('Error updating user status:', error);
       });
   };
 
   return (
     <div className="admin-container">
-      <h1 className="admin-title">Admin Dashboard</h1>
-      <h2 className="pending-requests-title">Pending Requests</h2>
-      <table className="pending-requests-table">
-        <thead>
-          <tr>
-            <th className="table-header">ID</th>
-            <th className="table-header">Property Address</th>
-            <th className="table-header">Requestor</th>
-            <th className="table-header">Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {pendingRequests.map(request => (
-            <tr key={request.id} className="table-row">
-              <td className="table-cell">{request.id}</td>
-              <td className="table-cell">{request.propertyAddress}</td>
-              <td className="table-cell">{request.requestor}</td>
-              <td className="table-cell">
-              </td>
+      <div className="sidebar">
+        <ul className="sidebar-list">
+        <li className="sidebar-item"><a style={{color:"white",fontSize:17}} href="/admine">Grant Page</a> </li>
+        <li className="sidebar-item"><a style={{color:"white",fontSize:17}} href="/AdmineProperties">Admine Properties</a> </li>
+        </ul>
+      </div>
+      <div className="main-content">
+        <h1 className="admin-title">Admin Dashboard</h1>
+        <h2 className="pending-requests-title">Users</h2>
+        <table className="pending-requests-table">
+          <thead>
+            <tr>
+              <th className="table-header">ID</th>
+              <th className="table-header">Name</th>
+              <th className="table-header">Email</th>
+              <th className="table-header">User Type</th>
+              <th className="table-header">Can Add</th>
+              <th className="table-header">Actions</th>
             </tr>
-          ))}
-        </tbody>
-        <button className="approve-button" onClick={() => approveRequest(request.id)}>Approve</button>
-        <button className="reject-button" onClick={() => rejectRequest(request.id)}>Reject</button>
-      </table>
+          </thead>
+          <tbody>
+            {users.map(user => (
+              <tr key={user.id} className="table-row">
+                <td className="table-cell">{user.id}</td>
+                <td className="table-cell">{user.f_name}</td>
+                <td className="table-cell">{user.email}</td>
+                <td className="table-cell">{user.user_type}</td>
+                <td className="table-cell">{user.can_add ? 'Yes' : 'No'}</td>
+                <td className="table-cell">
+                  <button
+                    className="approve-button"
+                    onClick={() => toggleCanAdd(user.id, user.can_add)}
+                  >
+                    {user.can_add ? 'Revoke' : 'Grant'}
+                  </button>
+                  <button
+                    className="reject-button"
+                    onClick={() => toggleCanAdd(user.id, user.can_add)}
+                  >
+                    {user.can_add ? 'Move Grant' : 'No Action'}
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
-  )
+  );
 }
 
 export default Admine;
